@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artisanat et Décoration</title>
+  <style>
+    /* Style global */
+    body {
+      font-family: 'Verdana', sans-serif;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      color: #333;
+      background: linear-gradient(to bottom, #e4eafc, #fff6e8);
+    }
+
+    header {
+      background-color: #4B0082;
+      color: white;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 1rem;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    header .logo img {
+      height: 130px;
+      margin-right: 40px;
+      margin-left: 1px;
+      margin-right: 130px;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    header nav ul li a:hover {
+      color: #FFD700;
+    }
+
+    section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #4B0082;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.product {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.product img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product:hover img {
+  transform: scale(1.1);
+}
+
+.product-info {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product:hover .product-info {
+  opacity: 1;
+}
+
+
+    footer {
+      background-color: #4B0082;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+    }
+
+    footer a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .newsletter {
+      background: linear-gradient(45deg, #FFD700, #FFA500);
+      padding: 1rem;
+      border-radius: 30px;
+      margin: 5rem 0;
+      color: #4B0082;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-left: 65px;
+    }
+
+    .newsletter h3 {
+      margin: 0 0 2rem;
+    }
+
+    .newsletter input[type="email"] {
+      width: calc(100% - 120px);
+      padding: 0.5rem;
+      border: 1px solid #4B0082;
+      border-radius: 9px;
+      margin-right: 60px;
+    }
+
+    .newsletter button {
+      padding: 0.5rem 2rem;
+      background-color: #4B0082;
+      color: white;
+      border: none;
+      border-radius: 9px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 15px;
+      
+    }
+
+    .newsletter button:hover {
+      background-color: #332970;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="image\logo.jpg" alt="Logo de l'artisanat">
+        <h1>Artisanat & Décoration</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#categories">Produits</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Section Hero -->
+  <section class="hero" id="home">
+    <div>
+      <h1>Bienvenue dans l'Artisanat</h1>
+      <h1>Transformez Votre Espace avec l'Artisanat</h1>
+      <p>Chaque pièce raconte une histoire unique. Apportez une touche personnelle à votre maison avec nos créations artisanales</p>
+    </div>
+  </section>
+
+  <!-- Section Catégories -->
+  <section id="categories">
+    <h2>Nos Produits</h2>
+
+    <div class="categories">
+
+      <!-- Catégorie : Décorations Murales -->
+      <div class="category">
+        <h3>Décorations Murales</h3>
+        <div class="products">
+          <div class="product">
+            <img src="image\1.jpg" alt="Tableau Abstrait">
+            <div class="product-info">
+              <h3>Tableau Abstrait</h3>
+            </div>
+          </div>
+          <div class="product">
+            <img src="image\2.jpg" alt="Horloge Design">
+            <div class="product-info">
+              <h3>Horloge Design</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Catégorie : Éclairage -->
+      <div class="category">
+        <h3>Éclairage</h3>
+        <div class="products">
+          <div class="product">
+            <img src="image\3.jpg" alt="Lampe Artisanale">
+            <div class="product-info">
+              <h3>Lampe Artisanale</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="category">
+        <h3>Éclairage</h3>
+        <div class="products">
+          <div class="product">
+            <img src="image\5.jpg" alt="Lampe Artisanale">
+            <div class="product-info">
+              <h3>Lampe Artisanale</h3>
+            </div>
+          </div>
+          <div class="product">
+            <img src="image\8.jpg" alt="Lampe Moderne">
+            <div class="product-info">
+              <h3>Lampe Moderne</h3>
+            </div>
+          </div>
+          <div class="product">
+            <img src="image\33.jpg" alt="Applique Murale">
+            <div class="product-info">
+              <h3>Applique Murale</h3>
+            </div>
+          </div>
+          <div class="product">
+            <img src="image\44.jpg" alt="Suspension Industrielle">
+            <div class="product-info">
+              <h3>Suspension Industrielle</h3>
+            </div>
+          </div>
+          <div class="product">
+            <img src="image\55.jpg" alt="Plafonnier Minimaliste">
+            <div class="product-info">
+              <h3>Plafonnier Minimaliste</h3>
+            </div>
+          </div>
+
+         
+       
+      <div class="product">
+        <img src="image\66.jpg" alt="Lustre Vintage">
+        <div class="product-info">
+          <h3>Lustre Vintage</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+      <!-- Catégorie : Accessoires -->
+      <div class="category">
+        <h3>Accessoires</h3>
+        <div class="products">
+          <div class="product">
+            <img src="image\77.jpg" alt="Panier en Osier">
+            <div class="product-info">
+              <h3>Panier en Osier</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <h3>Inscrivez-vous à notre Newsletter</h3>
+    <p>Recevez les dernières nouvelles et offres directement dans votre boîte mail.</p>
+    <form>
+      <input type="email" placeholder="Votre email" required>
+      <button type="submit">S'inscrire</button>
+    </form>
+  </section>
+
+  <!-- Section À propos -->
+  <section id="about">
+    <h2>À propos de nous</h2>
+    <p>Nous sommes une entreprise spécialisée dans les créations artisanales faites à la main avec amour et passion. Nos produits sont conçus pour embellir votre maison et refléter l'authenticité de l'artisanat local. Chaque article est unique, fait avec des matériaux de qualité et un savoir-faire exceptionnel.</p>
+  </section>
+
+  <!-- Section Contact -->
+  <section id="contact">
+    <h2>Contactez-nous</h2>
+
+
+    <div class="contact-info">
+        <p><strong>Adresse :</strong> route gremada km 1.5</p>
+      <p><strong>Téléphone :</strong> +216 58 420 661</p>
+      <p><strong>Email :</strong> mohemdsellami787@gmail.com</p>
+      </div>
+    </footer>
+    <p>Pour toute question ou commande personnalisée, n'hésitez pas à nous contacter :</p>
+
+    
+    <form>
+      <label for="name">Nom :</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="email">Email :</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+      <label for="message">Message :</label><br>
+      <textarea id="message" name="message" rows="5" required></textarea><br><br>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Artisanat & Décoration. Tous droits réservés. <a href="#">Mentions légales</a></p>
+    <p>SALLEMI A VOTRE SERVICE</p>
+  </footer>
+</body>
+
+</html>
